@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensure padding and margin are included in element's total width and height */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --main-padding: 20px; 
+    --main-bg-color: rgb(255, 0, 0);
+    --secondary-bg-color: rgb(252, 252, 252);
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--main-bg-color);
+    padding-bottom: var(--main-padding);
+    background-image: url('path/to/your/hero-image.jpg'); 
+    background-size: cover; 
+}
+
+nav {
+    display: flex;
+    width: 84%;
+    margin: auto;
+    padding: var(--main-padding) 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+nav ul li {
+    list-style: none;
+    margin: 10px;
+}
+
+.logo {
+    height: 200px;
+    width: 150px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: color 0.3s ease, background-color 0.3s ease; 
+    padding: 5px 10px; /* Add padding for clickable area */
+}
+
+nav ul li a:hover {
+    color: pink;
+    background-color: rgba(255, 255, 255, 0.3); /* Subtle background on hover */
+}
+
+.details {
+    display: flex;
+    margin-left: 8%;
+    margin-top: 15%;
+    justify-content: center; 
+}
+
+.wordinfo {
+    font-size: 50px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
+}
+
+.welcome {
+    height: 200px;
+    width: 200px;
+    transition: transform 0.3s; 
+}
+
+.welcome:hover {
+    transform: scale(1.05); 
+}
+
+.education, .motivation {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: fit-content;
+    background-size: cover; 
+    padding: var(--main-padding); 
+}
+
+.education {
+    background-image: url('path/to/your/study-image.jpg');
+}
+
+.hobbies {
+    background-color: var(--secondary-bg-color);
+    padding: var(--main-padding); 
+}
+
+.hobbies ul {
+    padding-left: 20px; 
+}
+
+.hobbies ul li {
+    margin: 5px 0; 
+}
+
+.motivation {
+    background-image: url('path/to/your/golden-image.jpg');
+}
+
+.motiinfo {
+    font-weight: bold;
+    color: black;
+}
+
+.contacts {
+    text-align: center;
+    background-color: var(--main-bg-color);
+    padding: var(--main-padding); 
+}
+
+@media (max-width: 768px) {
+    .wordinfo {
+        font-size: 36px; 
+    }
+
+    .logo {
+        height: 150px;
+        width: 100px; 
+    }
+
+    .welcome {
+        height: 150px;
+        width: 150px; 
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack links vertically on smaller screens */
+    }
+}
